@@ -1,0 +1,24 @@
+{
+  "name": "hugo-template-renan-sigolo",
+  "version": "1.0.0",
+  "description": "Hugo Template Renan Sigolo",
+  "main": "index.html",
+  "scripts": {
+    "build": "rm -rf dist && hugo",
+    "deploy": "npm run build && firebase deploy",
+    "format": "prettier '**/*' --write --ignore-unknown",
+    "start": "hugo serve -D",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "6.2.0",
+    "modern-normalize": "1.1.0"
+  },
+  "devDependencies": {
+    "prettier": "2.7.1",
+    "prettier-plugin-go-template": "0.0.13"
+  }
+}
