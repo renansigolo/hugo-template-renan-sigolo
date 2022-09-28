@@ -1,4 +1,4 @@
-#projects {
+.projects {
   .heading {
     font-size: 1.875rem;
     font-weight: 500;
@@ -24,7 +24,7 @@
     transform: scale(1.05);
   }
 
-  .card_image {
+  .card-image {
     aspect-ratio: 16 / 10;
     border-radius: 0.25rem;
     height: auto;
@@ -32,22 +32,18 @@
     width: 100%;
   }
 
-  .card_title {
+  .card-title {
     bottom: 0.5rem;
     color: var(--gray-200);
     left: 1rem;
     position: absolute;
   }
 
-  .card_title span {
+  .card-title span {
     font-weight: var(--bold);
   }
 
-  .card:hover .card_overlay {
-    display: block;
-  }
-
-  .card_overlay {
+  .card-overlay {
     background-color: var(--bg-gray-900);
     border-radius: 0.25rem;
     display: none;
@@ -56,5 +52,9 @@
     position: absolute;
     top: 0;
     width: 100%;
+  }
+
+  .card:hover .card-overlay {
+    display: block;
   }
 }

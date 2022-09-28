@@ -1,4 +1,4 @@
-<section id="projects">
+<section class="projects">
   <h2 class="heading">My Projects</h2>
   <div class="grid">
     {{ range $.Site.Data }}
@@ -44,12 +44,12 @@
               src="{{ $src }}"
               height="{{ $src.Height }}"
               width="{{ $src.Width }}"
-              class="card_image"
+              class="card-image"
             />
           </picture>
 
-          <div class="card_overlay">
-            <p class="card_title">
+          <div class="card-overlay">
+            <p class="card-title">
               <span>{{ .title }}</span>
               <br />
               {{ .url }}
