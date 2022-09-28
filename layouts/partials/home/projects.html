@@ -33,22 +33,10 @@
           target="_blank"
         >
           <picture>
-            <source
-              media="(max-width: 376px)"
-              srcset="{{ with $tiny.RelPermalink }}{{ . }}{{ end }}"
-            />
-            <source
-              media="(max-width: 992px)"
-              srcset="{{ with $small.RelPermalink }}{{ . }}{{ end }}"
-            />
-            <source
-              media="(max-width: 1599px)"
-              srcset="{{ with $medium.RelPermalink }}{{ . }}{{ end }}"
-            />
-            <source
-              media="(min-width: 1600px)"
-              srcset="{{ with $large.RelPermalink }}{{ . }}{{ end }}"
-            />
+            <source media="(max-width: 376px)" srcset="{{ with $tiny.RelPermalink }}{{ . }}{{ end }}" />
+            <source media="(max-width: 992px)" srcset="{{ with $small.RelPermalink }}{{ . }}{{ end }}" />
+            <source media="(max-width: 1599px)" srcset="{{ with $medium.RelPermalink }}{{ . }}{{ end }}" />
+            <source media="(min-width: 1600px)" srcset="{{ with $large.RelPermalink }}{{ . }}{{ end }}" />
 
             <img
               alt="{{ $alt }}"

@@ -2,14 +2,14 @@
 module.exports = {
   overrides: [
     {
-      files: ["*.html"],
+      files: ['*.html'],
       options: {
-        parser: "go-template",
+        parser: 'go-template',
         printWidth: 120,
       },
     },
     {
-      files: ["*.js"],
+      files: ['*.js'],
       options: {
         singleQuote: true,
       },

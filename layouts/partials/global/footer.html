@@ -4,12 +4,7 @@
       {{ range $.Site.Data }}
         {{ range .icons }}
           <li>
-            <a
-              aria-label="{{ .title }}"
-              href="{{ .url }}"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
+            <a aria-label="{{ .title }}" href="{{ .url }}" rel="noopener noreferrer" target="_blank">
               {{ partial "helpers/fontawesome.html" (lower .title) }}
             </a>
           </li>

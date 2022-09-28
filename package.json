@@ -18,7 +18,7 @@
     "deploy": "npm run build && firebase deploy",
     "format": "prettier '**/*' --write --ignore-unknown",
     "lint:scss": "stylelint 'assets/sass/**/*.scss' --fix",
-    "preinstall": "scripts/preinstall.sh",
+    "prepare": "scripts/prepare.sh",
     "start": "hugo serve -D",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
