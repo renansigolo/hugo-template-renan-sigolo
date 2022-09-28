@@ -17,16 +17,16 @@
 
   /* Font weight */
   --bold: 700;
+  accent-color: var(--green-600);
+  background-color: var(--gray-800);
 
   /* Global styles */
   color: var(--gray-100);
-  background-color: var(--gray-800);
-  accent-color: var(--green-600);
 }
 
 main {
-  max-width: var(--tablet);
-  margin-inline: auto;
   margin-bottom: 3rem;
+  margin-inline: auto;
+  max-width: var(--tablet);
   padding-inline: 1rem;
 }

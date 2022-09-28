@@ -7,6 +7,7 @@
     "build": "rm -rf dist && hugo",
     "deploy": "npm run build && firebase deploy",
     "format": "prettier '**/*' --write --ignore-unknown",
+    "lint:scss": "stylelint 'assets/sass/**/*.scss' --fix",
     "start": "hugo serve -D",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -19,6 +20,9 @@
   },
   "devDependencies": {
     "prettier": "2.7.1",
-    "prettier-plugin-go-template": "0.0.13"
+    "prettier-plugin-go-template": "0.0.13",
+    "stylelint": "14.12.1",
+    "stylelint-config-prettier": "9.0.3",
+    "stylelint-config-sass-guidelines": "9.0.1"
   }
 }
