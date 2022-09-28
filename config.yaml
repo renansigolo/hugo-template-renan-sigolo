@@ -1,0 +1,18 @@
+# Site
+baseURL: "https://your-website-address"
+languageCode: "pt-BR"
+title: "Your Website Title"
+googleAnalytics: "G-XXXXXXXXXX"
+
+# Custom variables
+params:
+  description: "Your website description"
+  themeColor: "#000000"
+
+# Build Configuration
+cleanDestinationDir: true
+disableHugoGeneratorInject: true
+enableRobotsTXT: true
+publishdir: "dist"
+minify: true
+disableKinds: [taxonomy, term, RSS]
