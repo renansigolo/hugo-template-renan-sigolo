@@ -1,13 +1,13 @@
 # Site
-baseURL: "https://your-website-address"
+baseURL: "YOUR_PROJECT_WEBSITE_ADDRESS"
 languageCode: "pt-BR"
-title: "Your Website Title"
+title: "YOUR_PROJECT_TITLE"
 googleAnalytics: "G-XXXXXXXXXX"
 
 # Custom variables
 params:
-  description: "Your website description"
-  themeColor: "#000000"
+  description: "YOUR_PROJECT_DESCRIPTION"
+  themeColor: "YOUR_PROJECT_THEME_COLOR"
 
 # Build Configuration
 cleanDestinationDir: true
