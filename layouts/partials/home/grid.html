@@ -1,9 +1,9 @@
-<section class="projects">
-  <h2 class="heading">My Projects</h2>
+<section class="section-grid">
+  <h2 class="heading">My Grid</h2>
   <div class="grid">
-    {{ range $.Site.Data }}
-      {{ range .projects }}
-        {{ $src := resources.Get (replace .title " " ""  | printf "images/projects/%s.webp" | lower) }}
+    {{ range .Site.Data }}
+      {{ range .grid }}
+        {{ $src := resources.Get (replace .id " " ""  | printf "images/grid/%s.png" | lower) }}
         {{ $alt := (print .title " preview") }}
 
         {{ $tinyw := default "500x webp" }}
@@ -27,7 +27,7 @@
 
         <a
           class="card"
-          aria-label="{{ .subtitle }}"
+          aria-label="{{ .description }}"
           href="https://{{ .url }}"
           rel="noopener noreferrer"
           target="_blank"
