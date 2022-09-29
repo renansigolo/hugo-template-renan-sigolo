@@ -22,7 +22,7 @@ A project template for [Hugo](https://gohugo.io/) static site generator.
    - `YOUR_PROJECT_NAME`
    - `YOUR_PROJECT_DESCRIPTION`
    - `YOUR_PROJECT_THEME_COLOR`
-   - `YOUR_PROJECT_WEBSITE_ADDRESS`
+   - `YOUR_PROJECT_DOMAIN`
    - `G-XXXXXXXXXX`
 
 1. Generate and Replace the following icons: **(WIP)**

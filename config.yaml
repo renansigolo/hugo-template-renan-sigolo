@@ -1,5 +1,5 @@
 # Site
-baseURL: "YOUR_PROJECT_WEBSITE_ADDRESS"
+baseURL: "https://YOUR_PROJECT_DOMAIN"
 languageCode: "pt-BR"
 title: "YOUR_PROJECT_TITLE"
 googleAnalytics: "G-XXXXXXXXXX"
