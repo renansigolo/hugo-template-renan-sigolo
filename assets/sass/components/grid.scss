@@ -1,4 +1,4 @@
-.projects {
+.section-grid {
   .heading {
     font-size: 1.875rem;
     font-weight: 500;
@@ -10,7 +10,7 @@
   .grid {
     display: grid;
     grid-gap: 1rem;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 2fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 2fr));
     place-items: center;
   }
 
