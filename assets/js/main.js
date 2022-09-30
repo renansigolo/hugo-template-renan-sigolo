@@ -1,3 +1,4 @@
+import './modules/dialog';
 import './modules/home';
 
 document.addEventListener('DOMContentLoaded', () => {
