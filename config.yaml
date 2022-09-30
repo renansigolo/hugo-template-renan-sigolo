@@ -1,7 +1,7 @@
 # Site
 baseURL: "https://YOUR_PROJECT_DOMAIN"
 languageCode: "pt-BR"
-title: "YOUR_PROJECT_TITLE"
+title: "YOUR_PROJECT_NAME"
 googleAnalytics: "G-XXXXXXXXXX"
 
 # Custom variables

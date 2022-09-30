@@ -23,6 +23,7 @@ A project template for [Hugo](https://gohugo.io/) static site generator.
    - `YOUR_PROJECT_DESCRIPTION`
    - `YOUR_PROJECT_THEME_COLOR`
    - `YOUR_PROJECT_DOMAIN`
+   - `YOUR_DEFAULT_LANGUAGE_CODE`
    - `G-XXXXXXXXXX`
 
 1. Generate and Replace the following icons: **(WIP)**
@@ -61,3 +62,9 @@ A project template for [Hugo](https://gohugo.io/) static site generator.
    | icons/icon-512x512.png     |    512x512    |         |
    | icons/maskable-512x512.png |    512x512    |         |
    | favicon.svg                | image/svg+xml |         |
+
+# TODO
+
+- [ ] Add a script to generate favicons
+- [ ] Add a script to generate the lincense file
+- [ ] Add a script to ask the values and replace the string placeholders

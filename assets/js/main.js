@@ -1,5 +1,5 @@
-import { one } from './modules/one';
+import './modules/home';
 
-(() => {
-  one();
-})();
+document.addEventListener('DOMContentLoaded', () => {
+  console.log('DOM loaded');
+});
