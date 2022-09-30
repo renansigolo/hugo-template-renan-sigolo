@@ -68,3 +68,5 @@ A project template for [Hugo](https://gohugo.io/) static site generator.
 - [ ] Add a script to generate favicons
 - [ ] Add a script to generate the lincense file
 - [ ] Add a script to ask the values and replace the string placeholders
+
+Test lint
