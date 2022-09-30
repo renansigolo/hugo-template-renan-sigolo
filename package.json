@@ -15,7 +15,7 @@
     "format": "prettier '**/*' --write --ignore-unknown",
     "fix:js": "npm run lint:js -- --fix",
     "fix:scss": "npm run lint:scss -- --fix",
-    "lint:js": "eslint 'assets/js/**/*.js' --exit-on-fatal-error true",
+    "lint:js": "eslint 'assets/js/**/*.js' --exit-on-fatal-error",
     "lint:scss": "stylelint 'assets/sass/**/*.scss'",
     "prepare": "scripts/prepare.sh",
     "start": "hugo serve -D",
