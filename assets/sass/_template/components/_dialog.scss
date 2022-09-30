@@ -1,5 +1,8 @@
-.dialog {
-  .container {
-    text-align: center;
+.dialog-section {
+  margin-bottom: 10vh;
+  text-align: center;
+
+  dialog::backdrop {
+    background: var(--bg-gray-900);
   }
 }
