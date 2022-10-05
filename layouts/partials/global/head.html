@@ -24,16 +24,12 @@
   {{/* Styles */}}
   {{ $options := (dict "targetPath" "styles.min.css" "outputStyle" "compressed") }}
   {{ $style := resources.Get "sass/main.scss" | resources.ToCSS $options | fingerprint }}
-  <link href="{{ $style.Permalink }}" rel="stylesheet" />
-
-  {{/* Vendors */}}
-  {{ $vendors := resources.Match "js/vendors/*.js" }}
-  {{ $jsVendors := $vendors | resources.Concat "vendors.js" | minify | fingerprint }}
-  <script src="{{ $jsVendors.Permalink }}" type="text/javascript" defer></script>
+  <link href="{{ $style.Permalink }}" rel="stylesheet" integrity="{{ $style.Data.Integrity }}" />
 
   {{/* Scripts */}}
-  {{ $jsMain := resources.Get "js/main.js" | js.Build | minify | fingerprint }}
-  <script src="{{ $jsMain.Permalink }}" type="text/javascript" defer></script>
+  {{ $jsParams := (dict "params" (dict "googleAnalyticsId" site.Config.Services.GoogleAnalytics.ID)) }}
+  {{ $js := resources.Get "js/main.js" | js.Build $jsParams | minify | fingerprint }}
+  <script src="{{ $js.Permalink }}" type="text/javascript" integrity="{{ $js.Data.Integrity }}" defer></script>
 
   {{/* Google Analytics */}}
   {{ if hugo.IsProduction }}

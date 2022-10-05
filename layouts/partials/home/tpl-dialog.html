@@ -1,42 +1,24 @@
-<section class="dialog-section">
+<section class="section-dialog" id="section-dialog">
   <h2>Trigger a dialog</h2>
   <p>A simple example of a dialog</p>
-  <button id="open-dialog">Open Dialog</button>
 
-  <dialog>
-    <p>Greetings, one and all!</p>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi voluptatibus nemo culpa similique dignissimos
-      obcaecati enim. Veritatis eligendi ipsum, quos sit delectus dignissimos ipsa saepe, culpa vel tenetur, expedita
-      iste.
-    </p>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi voluptatibus nemo culpa similique dignissimos
-      obcaecati enim. Veritatis eligendi ipsum, quos sit delectus dignissimos ipsa saepe, culpa vel tenetur, expedita
-      iste.
-    </p>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi voluptatibus nemo culpa similique dignissimos
-      obcaecati enim. Veritatis eligendi ipsum, quos sit delectus dignissimos ipsa saepe, culpa vel tenetur, expedita
-      iste.
-    </p>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi voluptatibus nemo culpa similique dignissimos
-      obcaecati enim. Veritatis eligendi ipsum, quos sit delectus dignissimos ipsa saepe, culpa vel tenetur, expedita
-      iste.
-    </p>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi voluptatibus nemo culpa similique dignissimos
-      obcaecati enim. Veritatis eligendi ipsum, quos sit delectus dignissimos ipsa saepe, culpa vel tenetur, expedita
-      iste.
-    </p>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi voluptatibus nemo culpa similique dignissimos
-      obcaecati enim. Veritatis eligendi ipsum, quos sit delectus dignissimos ipsa saepe, culpa vel tenetur, expedita
-      iste.
-    </p>
-    <form method="dialog">
-      <button>OK</button>
-    </form>
-  </dialog>
+  {{ range $num := (seq 5) }}
+    <button class="open-dialog-btn" id="open-dialog-{{ . }}" data-target="#dialog-{{ . }}">
+      Open Dialog
+      {{ . }}
+    </button>
+
+    <dialog id="dialog-{{ . }}">
+      <h3>Howdy, this is the title of dialog {{ . }}</h3>
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex placeat, totam provident suscipit ratione
+        necessitatibus. Dignissimos, qui repudiandae nisi corporis blanditiis vel asperiores adipisci ullam ad beatae
+        consequuntur distinctio non?
+      </p>
+
+      <form method="dialog">
+        <button>Close Dialog {{ . }}</button>
+      </form>
+    </dialog>
+  {{ end }}
 </section>
