@@ -36,18 +36,19 @@ A project template for [Hugo](https://gohugo.io/) static site generator.
 
    ## Genreal Icons
 
-   | Icon path                         |                           sizes                           | purpose |
-   | --------------------------------- | :-------------------------------------------------------: | :-----: |
-   | static/favicon.ico                | `16x16` `32x32` `48x48` <br /> `24x24` `64x64` (optional) |         |
-   | static/favicon.svg                |                             -                             |         |
-   | static/safari-pinned-tab.svg      |                             -                             |         |
-   | static/apple-touch-icon.png       |                          180x180                          |         |
-   | static/android-chrome-192x192.png |                          192x192                          |         |
-   | static/android-chrome-512x512.png |                          512x512                          |         |
-   | static/favicon-16x16.png          |                           16x16                           |         |
-   | static/favicon-32x32.png          |                           32x32                           |         |
-   | static/mstile-150x150.png         |                          150x150                          |         |
-   | static/safari-pinned-tab.svg      |                             -                             | Safari  |
+   | Icon path                         |                      sizes                      |  purpose   |
+   | --------------------------------- | :---------------------------------------------: | :--------: |
+   | static/favicon.ico                | 16x16 32x32 48x48 <br /> 24x24 64x64 (optional) |            |
+   | static/favicon.svg                |                        -                        |            |
+   | static/safari-pinned-tab.svg      |                        -                        |            |
+   | static/apple-touch-icon.png       |                     180x180                     |            |
+   | static/android-chrome-192x192.png |                     192x192                     |            |
+   | static/android-chrome-512x512.png |                     512x512                     |            |
+   | static/favicon-16x16.png          |                      16x16                      |            |
+   | static/favicon-32x32.png          |                      32x32                      |            |
+   | static/mstile-150x150.png         |                     150x150                     |            |
+   | static/safari-pinned-tab.svg      |                        -                        |   Safari   |
+   | static/site-feature-image.png     |                 1200px x 627px                  | Open Graph |
 
    ## Manifest Icons
 
