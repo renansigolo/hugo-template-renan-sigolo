@@ -8,5 +8,11 @@
     {{ end }}
 
     {{ partial "global/footer.html" . }}
+
+    {{/* Google Analytics and Open Graph */}}
+    {{ if hugo.IsProduction }}
+      {{ template "_internal/google_analytics.html" . }}
+      {{ template "_internal/opengraph.html" . }}
+    {{ end }}
   </body>
 </html>
