@@ -24,6 +24,7 @@ A project template for [Hugo](https://gohugo.io/) static site generator.
    - `YOUR_PROJECT_THEME_COLOR`
    - `YOUR_PROJECT_DOMAIN`
    - `YOUR_DEFAULT_LANGUAGE_CODE`
+   - `YOUR_FIREBASE_PROJECT_ID`
    - `G-XXXXXXXXXX`
 
 1. Generate and Replace the following icons: **(WIP)**
