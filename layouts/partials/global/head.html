@@ -11,15 +11,10 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="default" />
 
   {{/* Favicon */}}
-  <link type="image/svg+xml" href="favicon.svg" rel="icon" />
-  <link href="favicon.ico" rel="icon" />
-
-  {{/* Apple */}}
-  <link href="apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180" />
-  <link href="safari-pinned-tab.svg" rel="mask-icon" color="{{ .Site.Params.ThemeColor }}" />
-
-  {{/* Manifest */}}
-  <link href="site.webmanifest" rel="manifest" />
+  <link rel="icon" href="favicon.ico" sizes="any" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+  <link rel="manifest" href="site.webmanifest" />
 
   {{/* Styles */}}
   {{ $options := (dict "targetPath" "styles.min.css" "outputStyle" "compressed") }}

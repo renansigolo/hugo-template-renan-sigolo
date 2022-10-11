@@ -27,46 +27,63 @@ A project template for [Hugo](https://gohugo.io/) static site generator.
    - `YOUR_FIREBASE_PROJECT_ID`
    - `G-XXXXXXXXXX`
 
-1. Generate and Replace the following icons: **(WIP)**
+# Generate favicons
 
-   > You can use such tools to help you generate them such as [RealFaviconGenerator](https://realfavicongenerator.net) and [FAVIC-O-MATIC](https://favicomatic.com)
+1. Prepare a square SVG (1024x1024 with transparent background)
 
-   | Name    | Description       |   Size    | Aspect Ratio | Format | Transparency |
-   | ------- | ----------------- | :-------: | :----------: | :----: | :----------: |
-   | favicon | The original icon | 1024x1024 |     1:1      |  svg   |      ✅      |
+1. Create an ICO file (Part 1)
 
-   ## Genreal Icons
+   ```bash
+   inkscape ./icon.svg --export-width=64 --export-filename="./icon-64.png"
+   inkscape ./icon.svg --export-width=32 --export-filename="./icon-32.png"
+   ```
 
-   | Icon path                         |                      sizes                      |  purpose   |
-   | --------------------------------- | :---------------------------------------------: | :--------: |
-   | static/favicon.ico                | 16x16 32x32 48x48 <br /> 24x24 64x64 (optional) |            |
-   | static/favicon.svg                |                        -                        |            |
-   | static/safari-pinned-tab.svg      |                        -                        |            |
-   | static/apple-touch-icon.png       |                     180x180                     |            |
-   | static/android-chrome-192x192.png |                     192x192                     |            |
-   | static/android-chrome-512x512.png |                     512x512                     |            |
-   | static/favicon-16x16.png          |                      16x16                      |            |
-   | static/favicon-32x32.png          |                      32x32                      |            |
-   | static/mstile-150x150.png         |                     150x150                     |            |
-   | static/safari-pinned-tab.svg      |                        -                        |   Safari   |
-   | static/site-feature-image.png     |                 1200px x 627px                  | Open Graph |
+1. Compress the .png icons with ImageOptim
 
-   ## Manifest Icons
+1. Create an ICO file (Part 2)
 
-   | Icon path                  |     sizes     | purpose |
-   | -------------------------- | :-----------: | :-----: |
-   | icons/icon-72x72.png       |     72x72     |         |
-   | icons/icon-96x96.png       |     96x96     |         |
-   | icons/icon-128x128.png     |    128x128    |         |
-   | icons/icon-144x144.png     |    144x144    |         |
-   | icons/icon-152x152.png     |    152x152    |         |
-   | icons/icon-192x192.png     |    192x192    |         |
-   | icons/icon-512x512.png     |    512x512    |         |
-   | icons/maskable-512x512.png |    512x512    |         |
-   | favicon.svg                | image/svg+xml |         |
+   ```bash
+   convert ./icon-64.png ./icon-32.png ./favicon.ico
+   rm ./icon-64.png ./icon-32.png
+   ```
+
+1. Create Optimized PNG and SVG images
+
+   ```bash
+   inkscape ./icon.svg --export-width=512 --export-filename="./icon-512.png"
+   inkscape ./icon.svg --export-width=192 --export-filename="./icon-192.png"
+   inkscape ./icon.svg --export-width=180 --export-filename="./apple-touch-icon.png"
+   npx svgo --multipass ./icon.svg
+   npx @squoosh/cli --quant 64 --oxipng auto ./*.png
+   ```
+
+1. Rename the icon file
+
+   ```bash
+   mv icon.svg favicon.svg
+   ```
+
+1. Add the icons to the manifest file
+
+   ```json
+   { "src": "icon-192.png", "sizes": "192x192", "type": "image/png" },
+   { "src": "icon-512.png", "sizes": "512x512", "type": "image/png" },
+   { "src": "icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" },
+   { "src": "favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+   ```
+
+1. Add the icons to HTML
+
+   ```html
+   <link rel="icon" href="favicon.ico" sizes="any" />
+   <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+   <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+   <link rel="manifest" href="site.webmanifest" />
+   ```
+
+1. Generate and add the maskable icon
 
 # TODO
 
-- [ ] Add a script to generate favicons
 - [ ] Add a script to generate the lincense file
 - [ ] Add a script to ask the values and replace the string placeholders

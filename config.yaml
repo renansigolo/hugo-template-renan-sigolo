@@ -14,8 +14,9 @@ params:
 cleanDestinationDir: true
 disableHugoGeneratorInject: true
 enableRobotsTXT: true
-publishdir: "dist"
 minify: true
+publishdir: "dist"
+removePathAccents: true
 disableKinds: [taxonomy, term, RSS]
 build:
   noJSConfigInAssets: true
