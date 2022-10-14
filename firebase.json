@@ -10,6 +10,15 @@
     ],
     "headers": [
       {
+        "source": "**",
+        "headers": [
+          {
+            "key": "Content-Security-Policy",
+            "value": "base-uri 'none'; default-src 'self'; object-src 'none'; script-src 'none'; script-src-elem 'self' https://*.googletagmanager.com 'unsafe-inline'; connect-src YOUR_CLOUD_FUNCTION_URL; require-trusted-types-for 'script';"
+          }
+        ]
+      },
+      {
         "source": "/**",
         "headers": [
           {

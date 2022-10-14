@@ -29,7 +29,14 @@ A project template for [Hugo](https://gohugo.io/) static site generator.
 
 # Generate favicons
 
-1. Prepare a square SVG (1024x1024 with transparent background)
+1. Prepare a square SVG icon with the following specifications:
+
+   - Size: 1024x1024
+   - Background: transparent
+   - Padding: 32px
+   - Format: SVG
+
+   > You can get use this [figma template](https://www.figma.com/community/file/867475182694539251) to help you visualize all possible icon variations
 
 1. Create an ICO file (Part 1)
 
