@@ -1,5 +1,16 @@
 {
   "projects": {
-    "default": "YOUR_FIREBASE_PROJECT_ID"
-  }
+    "default": "renan-sigolo-website",
+    "dev": "renan-sigolo-website"
+  },
+  "targets": {
+    "renan-sigolo-website": {
+      "hosting": {
+        "local": [
+          "renan-sigolo-website"
+        ]
+      }
+    }
+  },
+  "etags": {}
 }

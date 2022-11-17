@@ -27,6 +27,8 @@ A project template for [Hugo](https://gohugo.io/) static site generator.
    - `YOUR_FIREBASE_PROJECT_ID`
    - `G-XXXXXXXXXX`
 
+1. Review the values in `.firebaserc` and `firebase.json` files.
+
 # Generate favicons
 
 1. Prepare a square SVG icon with the following specifications:

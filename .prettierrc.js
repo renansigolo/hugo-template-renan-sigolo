@@ -12,7 +12,8 @@ module.exports = {
       files: ['*.js'],
       options: {
         singleQuote: true,
+        semi: false,
       },
     },
   ],
-};
+}

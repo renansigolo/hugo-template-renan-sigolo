@@ -1,0 +1,5 @@
+.env
+.env.dev
+firebase-debug.log
+node_modules/
+ui-debug.log
